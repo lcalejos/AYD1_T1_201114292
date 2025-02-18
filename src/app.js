@@ -10,13 +10,13 @@ app.use(bodyParser.json());
 let canciones = [];
 
 app.post('/canciones', (req, res) => {
-    const { nombre, artista, album } = req.body;
+    const { nombre, artista, genero } = req.body;
 
     const nuevaCancion = {
         id: canciones.length + 1, // ID autoincremental
         nombre,
         artista,
-        album
+        genero
     };
 
     canciones.push(nuevaCancion);
