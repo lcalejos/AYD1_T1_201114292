@@ -24,6 +24,14 @@ app.post('/canciones', (req, res) => {
     res.status(201).json(nuevaCancion);
 });
 
+app.get('/info', (req, res) => {
+    const datos = {
+        nombre: 'Luis Carlos Alejos Avila',
+        carnet: '201114292'  
+    };
+
+    res.json(datos);
+});
 app.listen(port, () => {
     console.log(`Servidor corriendo en http://localhost:${port}`);
 });
